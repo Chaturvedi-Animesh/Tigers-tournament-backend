@@ -23,7 +23,7 @@ public class InfoRequest {
     @NotBlank(message = "Name should not be blank")
     private  String name;
     @NotBlank(message = "Email Id should not be blank")
-    @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\\\.[A-Za-z0-9-]+)*(\\\\.[A-Za-z]{2,})$")
+//    @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\\\.[A-Za-z0-9-]+)*(\\\\.[A-Za-z]{2,})$")
     private String emailId;
     @NotBlank(message = "Password should not be blank")
     private String password;
