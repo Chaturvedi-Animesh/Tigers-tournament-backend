@@ -4,7 +4,7 @@ node {
   }
 
   stage("Compilation") {
-    sh "sudo ./mvnw clean install -DskipTests"
+    sh "mvn clean install -DskipTests"
   }
 
   stage("Tests and Deployment") {
