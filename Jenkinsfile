@@ -8,7 +8,7 @@ node {
   }
 
   stage("Tests and Deployment") {
-    stage("Runing unit tests") {
+    stage("Running unit tests") {
       sh "./mvnw test -Punit"
     }
     stage("Deployment") {
