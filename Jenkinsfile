@@ -9,7 +9,7 @@ node {
 
   stage("Tests and Deployment") {
     stage("Running unit tests") {
-      sh "./mvnw test -Punit"
+      sh "mvn test -Punit"
     }
     stage("Deployment") {
       sh 'nohup ./mvnw spring-boot:run -Dserver.port=8082 &'
