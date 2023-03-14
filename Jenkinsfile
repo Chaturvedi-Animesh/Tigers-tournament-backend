@@ -7,12 +7,13 @@ node {
     sh "mvn clean install -DskipTests"
   }
 
-  stage("Tests and Deployment") {
-    stage("Running unit tests") {
-      sh "mvn test -Punit"
+  stage("Building") {
+    stage("Building") {
+      sh "mvn compile"
+      sh 'mvn package'
     }
     stage("Deployment") {
-      sh 'nohup mvn spring-boot:run -Dserver.port=8082 &'
+      sh 'java -jar target/tigerstournament-0.0.1-SNAPSHOT.jar'
     }
   }
 }
