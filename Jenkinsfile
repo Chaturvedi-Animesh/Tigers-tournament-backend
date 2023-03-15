@@ -13,7 +13,7 @@ node {
       sh 'mvn package'
     }
     stage("Deployment") {
-      sh 'java -jar target/tigerstournament-0.0.1-SNAPSHOT.jar'
+      sh 'nohup java -jar target/tigerstournament-0.0.1-SNAPSHOT.jar &'
     }
   }
 }
