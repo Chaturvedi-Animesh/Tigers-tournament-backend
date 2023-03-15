@@ -13,7 +13,8 @@ node {
       sh 'mvn package'
     }
     stage("Deployment") {
+    keepRunning{
       sh 'java -jar target/tigerstournament-0.0.1-SNAPSHOT.jar'
-    }
+    }}
   }
 }
